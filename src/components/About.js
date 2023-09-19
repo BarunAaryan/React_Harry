@@ -13,12 +13,14 @@ const toggleStyle=()=>{
         setmyStyle({
             color:'black',
             backgroundColor: 'white'
+            
         })
         setBtntext("Enable Dark Mode")
     }else{
         setmyStyle({
             color:'white',
-            backgroundColor: 'black'
+            backgroundColor: 'black',
+            border: '2px solidhite'
         })
         setBtntext("Enable Light Mode")
         
