@@ -5,11 +5,11 @@ import TextForm from './components/TextForm';
 import { useState } from 'react';
 import Alert from './components/Alert';
 import About from './components/About';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Routes,
+//   Route,
+// } from "react-router-dom";
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
     })
     setTimeout(()=>{
 setAlert(null);
-    }, 1500);
+    }, 1700);
   }
   const toggleMode=()=>{
     if(mode === 'light'){
@@ -40,16 +40,17 @@ setAlert(null);
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar title="TextUtils" aboutText="About Barun" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container my-3">
-        <Routes>
+        {/* <Routes>
         <Route exact path="/about" element={<About />} />
           <Route path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} />} />
-    </Routes>
+    </Routes> */}
+<TextForm showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>
       </div>
-    </Router>
+    {/* </Router> */}
   </>
   );
 }
